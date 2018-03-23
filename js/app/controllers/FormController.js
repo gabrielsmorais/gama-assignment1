@@ -5,7 +5,7 @@ class FormController {
         let $ = document.querySelector.bind(document);
         this._inputName = $('#name');
         this._inputEmail = $('#email');
-        this._inputworkPlace = $('#workPlace');
+        this._inputCompany = $('#company');
         this._formList = new FormList();
         
         // this._negociacoesView = new NegociacoesView($('#negociacoesView'));
@@ -35,14 +35,14 @@ class FormController {
         return new Form(
             this._inputName.value,
             this._inputEmail.value,
-            this._inputworkPlace.value);
+            this._inputCompany.value);
     }
     
     _clearForm() {
      
         this._inputName.value = '';
         this._inputEmail.value = '';
-        this._inputworkPlace.value = '';
+        this._inputCompany.value = '';
         this._inputName.focus();   
     }
 }
