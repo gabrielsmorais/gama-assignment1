@@ -13,9 +13,20 @@
 
         <form id="form" class="topBefore" onsubmit="formController.add(event)">
 		
-            <input id="name" type="text" placeholder="Nome Completo" required>
-            <input id="email" type="email" placeholder="E-Mail" required>
-            <input id="workPlace" type="text" placeholder="Empresa">
+            <input id="name" type="text" placeholder="Nome Completo"
+            pattern="(.*)\s(.*)" 
+            oninvalid="this.setCustomValidity('Favor Inserir Nome Completo')"
+            oninput="setCustomValidity('')"  
+            required>
+            <input id="email" type="email" placeholder="E-Mail"
+            pattern="(.*)+@(.*)+\.(.*)"
+            oninvalid="this.setCustomValidity('Favor Inserir Email no formato nome@dominio.exemplo')"
+            oninput="setCustomValidity('')"  
+            required>
+            <input id="company" type="text" placeholder="Empresa"
+            oninvalid="this.setCustomValidity('Favor Inserir Nome da Empresa')"
+            oninput="setCustomValidity('')"
+            required>
             <input id="submit" type="submit" value="Enviar!">
         
       </form>
