@@ -1,0 +1,123 @@
+@keyframes spin {
+  
+    from {
+      transform: rotate( 0deg );
+    }
+    
+    to {
+      transform: rotate( 360deg );
+    }
+  }
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+
+    form{
+        align-self: center;
+        font-family: 'Roboto Slab', serif;
+    }
+      
+      input::placeholder{
+        font-family: 'Roboto Slab', serif;
+        color: #bbb5af;
+        font-size: 0.875em;
+      }
+      
+      input:focus::placeholder{
+        color: #bbb5af;
+      }
+            
+      input:hover::placeholder{
+        color: black;
+        font-size: 0.875em;
+      }
+      
+      input:hover:focus::placeholder{
+        color: black;
+      }
+      
+      input:hover::placeholder{
+        color: black;
+        font-size: 0.875em;
+      }
+      
+      #form {
+        position: relative;
+        width: 500px;
+        margin: 50px auto 100px auto;
+      }
+      
+      input {
+        font-family: 'Roboto Slab', serif;
+        font-size: 0.875em;
+        width: 470px;
+        height: 50px;
+        padding: 0px 15px 0px 15px;
+        
+        background: transparent;
+        outline: none;
+        color: #bbb5af;
+        
+        border: solid 1px #b3aca7;
+        border-bottom: none;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      input:hover {
+        background: #b3aca7;
+        color: #4F4E4E;
+      }
+      
+      
+      #submit {
+        width: 502px;
+        
+        padding: 0;
+        margin: -5px 0px 0px 0px;
+        
+        font-family: 'Roboto Slab', serif;
+        font-size: 0.875em;
+        color: #b3aca7;
+        
+        outline:none;
+        cursor: pointer;
+        
+        border: solid 1px #b3aca7;
+      }
+      
+      #submit:hover {
+        color: #4F4E4E;
+      }
+}
+
+.contentOne {
+
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+}
+
+.contentTwo {
+
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+}
+
+.contentThree {
+
+    width: 100vw;
+    height: 100vh;
+    background-color: green;
+}
