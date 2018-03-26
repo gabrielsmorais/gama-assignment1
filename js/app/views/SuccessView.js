@@ -1,3 +1,4 @@
+//SUCCESS MESSAGE VIEW MAKER
 class SuccessView extends Views {
     
     constructor(elemento) {
@@ -6,6 +7,7 @@ class SuccessView extends Views {
     
    template(model) {
        
-       return model.texto ? `<p style="color:white;">${model.texto}</p>` : '<p></p>';
+       return model.texto ? `<p style="color:#C7F262;font-family: 'Megrim', cursive; text-align: center;">
+       ${model.texto}</p>` : '<p></p>';
    }
 }

@@ -1,3 +1,4 @@
+//FORM CONSTRUCTOR AND METHODS
 class Form {
     
     constructor(name, email, company) {

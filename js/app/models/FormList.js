@@ -1,3 +1,4 @@
+//FIREBASE INFO
 let firebaseOn = false;
 var config = {
     apiKey: "AIzaSyBi6SOnQP3knUCJ5klWXL2ixCdxQQe3IMo",
@@ -15,9 +16,10 @@ class FormList {
         this._form = [];
     }
     
+    //FORM MAKER
     add(form) {
 
-        //FIREBASE
+        //FIREBASE START
             if (firebaseOn == false) {
                 firebase.initializeApp(config);
             };
@@ -30,33 +32,37 @@ class FormList {
         this._form.push(form);
     }
     
-    get form() {
+    //GET FORMS FROM FIREBASE
+    getForm(getData) {
+                //FIREBASE START
+                if (firebaseOn == false) {
+                    firebase.initializeApp(config);
+                };
+                var database = firebase.database();
+                var ref = database.ref('forms');
+                firebaseOn = true;
 
-        //FIREBASE
-            if (firebaseOn == false) {
-                firebase.initializeApp(config);
-            };
-            var database = firebase.database();
-            var ref = database.ref('forms');
-            firebaseOn = true;
-            
-            ref.on('value', this.gotData, this.errData);
+                ref.on('value', data => this.gotData(getData, data), this.errData)
 
-
-        return [].concat(this._form);
     }
 
-    gotData(data) {
+    //GET DATA FROM FIREBASE
+    gotData(getData, data) {
         var forms = data.val();
         var keys = Object.keys(forms);
 
+
+        var list = [];
         for (let index = 0; index < keys.length; index++) {
             var k = keys [index];
             var name = forms[k]._name;
             var email = forms[k]._email;
             var company = forms[k]._company;           
             console.log(name, email, company); 
+            list.push(new Form(name, email, company))
         }
+
+        getData(list);
 
     }
 

@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    background-color: black;
     margin: 0;
 }
 
@@ -14,9 +15,9 @@ body {
     align-items: center;
     flex-direction: column;
 
-    // background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 100%, transparent), url(../images/hero.jpg);
-    // background-size: cover;
-    // background-position: center, center;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 100%, transparent), url(../images/hero.jpg);
+    background-size: cover;
+    background-position: center, center;
 
     h1 {
         color: #E5E1DD;
@@ -190,8 +191,8 @@ body {
 
 .contentOne {
     width: 100vw;
-    height: 100vh;
-    background-color: blue;
+    height: 80vh;
+    background-color: #191717;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -209,8 +210,8 @@ body {
 
 .contentTwo {
     width: 100vw;
-    height: 100vh;
-    background-color: red;
+    height: 85vh;
+    background-color: #2D2B2B;
     display: flex;
     align-items: center;
 
@@ -219,6 +220,7 @@ body {
         height: 50%;
         width: 50%;
         margin-right: 50px;
+        margin-top: 0;
 
         h2 {
             color: #E5E1DD;
@@ -244,6 +246,7 @@ body {
         img{
             max-height: 100%;
             max-width: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     }
 
@@ -251,33 +254,23 @@ body {
 
 .contentThree {
     width: 100vw;
-    height: 60vh;
-    background-color: green;
+    height: 80vh;
+    background-color: #4C4B4B;
     justify-content: center;
-display: flex;
-
+    display: flex;
+    flex-wrap: wrap;
+    
     h2 {
+        width: 100%;
         color: #E5E1DD;
         font-family: 'Megrim', cursive;
         font-size: 4rem;
         text-align: center;
-        flex-direction: column;
     }
 
-    div{
-        height: 100%;
-        width: 100%;
-        img{
-            max-width: 33%;
-            max-height: 50%;
-            align-self: center;
-
-        }
+    img {
+        max-height: 50%;
+        max-width: 50%;
     }
 
-    .contanerX{
-        background: white;
-        height: 100%;
-        width: 100%;
-      }
 }
