@@ -254,7 +254,7 @@ body {
     height: 60vh;
     background-color: green;
     justify-content: center;
-    display: flex;
+display: flex;
 
     h2 {
         color: #E5E1DD;
@@ -274,4 +274,10 @@ body {
 
         }
     }
+
+    .contanerX{
+        background: white;
+        height: 100%;
+        width: 100%;
+      }
 }

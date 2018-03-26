@@ -8,12 +8,12 @@ class FormController {
         this._inputCompany = $('#company');
         this._formList = new FormList();
         
-        // this._negociacoesView = new NegociacoesView($('#negociacoesView'));
-        // this._negociacoesView.update(this._listaNegociacoes);
+        this._inputView = new InputView($('#inputView'));
+        this._inputView.update(this._formList);
         
-        // this._mensagem = new Mensagem();
-        // this._mensagemView = new MensagemView($('#mensagemView'));
-        // this._mensagemView.update(this._mensagem);
+        this._mensagem = new Message();
+        this._successView = new SuccessView($('#successView'));
+        this._successView.update(this._mensagem);
         
     }
     
@@ -21,10 +21,10 @@ class FormController {
         
         event.preventDefault();
         this._formList.add(this._createForm());
-        // this._negociacoesView.update(this._listaNegociacoes);
+        this._inputView.update(this._formList);
         
-        // this._mensagem.texto = 'Negociação adicionada com sucesso';
-        // this._mensagemView.update(this._mensagem);
+        this._mensagem.texto = 'Negociação adicionada com sucesso';
+        this._successView.update(this._mensagem);
         console.log('Form Created');
         console.log(this._formList._form);
         this._clearForm();   

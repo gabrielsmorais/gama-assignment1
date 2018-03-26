@@ -197,3 +197,7 @@ body {
       max-width: 33%;
       max-height: 50%;
       align-self: center; }
+  .contentThree .contanerX {
+    background: white;
+    height: 100%;
+    width: 100%; }
