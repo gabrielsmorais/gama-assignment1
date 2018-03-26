@@ -4,46 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Megrim|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Megrim|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/styles.css ">
     <title>Document</title>
 </head>
 <body>
     <div class="hero">
 
-        <form id="form" class="topBefore" onsubmit="formController.add(event)">
+        <div id="title" class="is-loading">
+
+            <h1>A Trip To The Moon</h1>
+            <h2>Central de Viagens Lunares</h2>
+
+        </div>
+
+
+                <form id="form" class="topBefore" onsubmit="formController.add(event)">
 		
-            <input id="name" type="text" placeholder="Nome Completo"
-            pattern="(.*)\s(.*)" 
-            oninvalid="this.setCustomValidity('Favor Inserir Nome Completo')"
-            oninput="setCustomValidity('')"  
-            required>
-            <input id="email" type="email" placeholder="E-Mail"
-            pattern="(.*)+@(.*)+\.(.*)"
-            oninvalid="this.setCustomValidity('Favor Inserir Email no formato nome@dominio.exemplo')"
-            oninput="setCustomValidity('')"  
-            required>
-            <input id="company" type="text" placeholder="Empresa"
-            oninvalid="this.setCustomValidity('Favor Inserir Nome da Empresa')"
-            oninput="setCustomValidity('')"
-            required>
-            <input id="submit" type="submit" value="Enviar!">
-        
-      </form>
+                        <input id="name" type="text" placeholder="Nome Completo"
+                        pattern="(.*)\s(.*)" 
+                        oninvalid="this.setCustomValidity('Favor Inserir Nome Completo')"
+                        oninput="setCustomValidity('')"  
+                        required>
+                        <input id="email" type="email" placeholder="E-Mail"
+                        pattern="(.*)+@(.*)+\.(.*)"
+                        oninvalid="this.setCustomValidity('Favor Inserir Email no formato nome@dominio.exemplo')"
+                        oninput="setCustomValidity('')"  
+                        required>
+                        <input id="company" type="text" placeholder="Empresa"
+                        oninvalid="this.setCustomValidity('Favor Inserir Nome da Empresa')"
+                        oninput="setCustomValidity('')"
+                        required>
+                        <input id="submit" type="submit" value="Enviar!">
+                    
+                  </form>
+
+                  <svg class="arrows">
+                        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                  </svg>
 
     </div>
     
     <div class="contentOne"> 
 
+        <h2>Últimos Cadastros</h2>
+
     </div>
 
     <div class="contentTwo"> 
-        
+
+        <div class="contentLeft">
+
+                <img src="images/hero.jpg" alt="">
+
+        </div>
+
+        <div class="contentRight">
+
+                <h2>Nosso Serviço</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sequi laudantium provident vel omnis quod quos voluptatibus quibusdam error expedita impedit, iusto molestiae eos repellat fugiat sit mollitia rem. Quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum porro consectetur corrupti ipsam? Itaque eligendi porro magnam nam nisi et, ipsam vero eius quod repellat non natus architecto. Voluptate!</p>
+                
+            </div>
+
     </div>
 
     <div class="contentThree"> 
+
+        <h2>Parceiros</h2>
+        <div>
+
+            <img src="images/nasa.png" alt="">
+            <img src="images/gama.png" alt="">
+
+        </div>
         
     </div>
+    <script src="js/index.js"></script>
     <script src="js/app/models/Form.js"></script>
     <script src="js/app/controllers/FormController.js"></script>
     <script src="js/app/models/FormList.js"></script>
