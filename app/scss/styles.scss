@@ -14,11 +14,11 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 100%, transparent), url(../images/hero.jpg);
     background-size: cover;
     background-position: center, center;
 
+    //H1 BEGIN
     h1 {
         color: #E5E1DD;
         font-family: 'Megrim', cursive;
@@ -63,6 +63,7 @@ body {
         transition: width 0.4s ease;
         transition-delay: 0.8s;
     }
+    //H1 END
 
     h2 {
         color: #E5E1DD;
@@ -72,6 +73,7 @@ body {
         text-align: center;
     }
 
+    //FORM BEGIN
     form {
         align-self: center;
         font-family: 'Open Sans', sans-serif;
@@ -143,7 +145,9 @@ body {
       #submit:hover {
         color: #4F4E4E;
       }
-  
+    //FORM END
+
+    //ARROWS BEGIN
     .arrows {
         width: 80px;
         height: 92px;
@@ -168,14 +172,6 @@ body {
     100% {opacity:0}
     }
   
-    @-webkit-keyframes arrow
-    {
-    0% {opacity:0}
-    40% {opacity:1}
-    80% {opacity:0}
-    100% {opacity:0}
-    }
-  
     .arrows path.a1 {
         animation-delay:-1s;
     }
@@ -187,6 +183,7 @@ body {
     .arrows path.a3 {
         animation-delay:0s;
     }
+    //ARROWS END
 }
 
 .contentOne {
