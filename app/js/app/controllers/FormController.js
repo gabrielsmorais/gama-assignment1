@@ -23,11 +23,10 @@ class FormController {
         this._formList.add(this._createForm());
         this._inputView.update(this._formList);
         
-        this._mensagem.texto = 'Negociação adicionada com sucesso';
+        this._mensagem.texto = 'Cadastro Efetuado com Sucesso (Console)';
         this._successView.update(this._mensagem);
-        console.log('Form Created');
-        console.log(this._formList._form);
         this._clearForm();   
+
     }
     
     _createForm() {
@@ -45,4 +44,5 @@ class FormController {
         this._inputCompany.value = '';
         this._inputName.focus();   
     }
+
 }

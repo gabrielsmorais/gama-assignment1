@@ -6,3 +6,4 @@ window.onload = function() {
         $("#title").classList.remove("is-loading");
       }, 100);
 };
+

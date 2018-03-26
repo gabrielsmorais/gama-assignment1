@@ -1,10 +1,10 @@
 class Form {
     
-    constructor(name, email, Company) {
+    constructor(name, email, company) {
         
         this._name = name;
         this._email = email;
-        this._Company = Company;
+        this._company = company;
         Object.freeze(this);
     }
 
@@ -18,8 +18,8 @@ class Form {
         return this._email;
     }
     
-    get Company() {
+    get company() {
         
-        return this._Company;
+        return this._company;
     }
 }

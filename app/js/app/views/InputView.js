@@ -10,10 +10,9 @@ class InputView extends Views {
         <table class="table table-hover table-bordered">
             <thead>
                 <tr>
-                    <th>DATA</th>
-                    <th>QUANTIDADE</th>
-                    <th>VALOR</th>
-                    <th>VOLUME</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Empresa</th>
                 </tr>
             </thead>
         
@@ -23,7 +22,7 @@ class InputView extends Views {
                     <tr>
                         <td>${n.name}</td>
                         <td>${n.email}</td>
-                        <td>${n.Company}</td>
+                        <td>${n.company}</td>
                     </tr>
                     
                 `).join('')}                
