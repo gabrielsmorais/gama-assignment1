@@ -12,6 +12,6 @@ class FormList {
     
     get form() {
         
-        return [].concat(this.form);
+        return [].concat(this._form);
     }
 }
