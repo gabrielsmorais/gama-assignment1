@@ -1,3 +1,4 @@
+//INPUT VIEW MAKER
 class InputView extends Views {
     
     constructor(elemento) {
@@ -7,7 +8,7 @@ class InputView extends Views {
     template(model) {
         
         return `
-        <table class="table table-hover table-bordered">
+        <table style="color:white;font-family: 'Megrim', cursive; text-align: center;">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -17,9 +18,9 @@ class InputView extends Views {
             </thead>
         
             <tbody>
-                ${model.form.map(n => `
+                ${model.map(n => `
                     
-                    <tr>
+                    <tr style="color:white; font-family: 'Open Sans', sans-serif;">
                         <td>${n.name}</td>
                         <td>${n.email}</td>
                         <td>${n.company}</td>

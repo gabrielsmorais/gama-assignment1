@@ -1,3 +1,4 @@
+//MESSAGE MAKER
 class Message {
     
     constructor(texto='') {

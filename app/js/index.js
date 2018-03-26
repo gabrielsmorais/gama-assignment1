@@ -1,3 +1,5 @@
+//CSS TITLE STYLING
+
 let $ = document.querySelector.bind(document);
 
 
