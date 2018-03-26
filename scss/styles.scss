@@ -1,14 +1,3 @@
-@keyframes spin {
-  
-    from {
-      transform: rotate( 0deg );
-    }
-    
-    to {
-      transform: rotate( 360deg );
-    }
-  }
-
 html {
     overflow-x: hidden;
 }
@@ -22,32 +11,92 @@ body {
     height: 100vh;
     background-color: black;
     display: flex;
+    align-items: center;
+    flex-direction: column;
 
-    form{
+    // background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 100%, transparent), url(../images/hero.jpg);
+    // background-size: cover;
+    // background-position: center, center;
+
+    h1 {
+        color: #E5E1DD;
+        font-family: 'Megrim', cursive;
+        font-size: 6rem;
+        margin-bottom: 0;
+        text-align: center;
+        margin-top: 90px;
+        opacity: 1;
+        transform: scale(1);
+        transition: transform 0.5s ease, opacity 1s ease;
+    }
+
+    .is-loading h1 {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    
+    h1:before {
+        top: 0;
+        left: 0;
+    }
+  
+    h1:after {
+        bottom: 0;
+        right: 0;
+    }
+  
+    .is-loading h1:before,
+    .is-loading h1:after {
+        width: 0;
+    }
+  
+  
+    h1:before,
+    h1:after {
+        height: 2px;
+        width: 100%;
+        content: "";
+        background: #E5E1DD;
+        display: block;
+        position: absolute;
+        transition: width 0.4s ease;
+        transition-delay: 0.8s;
+    }
+
+    h2 {
+        color: #E5E1DD;
+        font-family: 'Megrim', cursive;
+        font-size: 3rem;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    form {
         align-self: center;
-        font-family: 'Roboto Slab', serif;
+        font-family: 'Open Sans', sans-serif;
+        width: 100%;
     }
       
-      input::placeholder{
-        font-family: 'Roboto Slab', serif;
+      input::placeholder {
+        font-family: 'Open Sans', sans-serif;
         color: #bbb5af;
         font-size: 0.875em;
       }
       
-      input:focus::placeholder{
+      input:focus::placeholder {
         color: #bbb5af;
       }
             
-      input:hover::placeholder{
+      input:hover::placeholder {
         color: black;
         font-size: 0.875em;
       }
       
-      input:hover:focus::placeholder{
+      input:hover:focus::placeholder {
         color: black;
       }
       
-      input:hover::placeholder{
+      input:hover::placeholder {
         color: black;
         font-size: 0.875em;
       }
@@ -55,20 +104,18 @@ body {
       #form {
         position: relative;
         width: 500px;
-        margin: 50px auto 100px auto;
+        margin: 0px auto 100px auto;
       }
       
       input {
-        font-family: 'Roboto Slab', serif;
+        font-family: 'Open Sans', sans-serif;
         font-size: 0.875em;
         width: 470px;
         height: 50px;
         padding: 0px 15px 0px 15px;
-        
         background: transparent;
         outline: none;
         color: #bbb5af;
-        
         border: solid 1px #b3aca7;
         border-bottom: none;
         transition: all 0.3s ease-in-out;
@@ -82,42 +129,149 @@ body {
       
       #submit {
         width: 502px;
-        
         padding: 0;
         margin: -5px 0px 0px 0px;
-        
-        font-family: 'Roboto Slab', serif;
+        font-family: 'Open Sans', sans-serif;
         font-size: 0.875em;
         color: #b3aca7;
-        
         outline:none;
         cursor: pointer;
-        
         border: solid 1px #b3aca7;
       }
       
       #submit:hover {
         color: #4F4E4E;
       }
+  
+    .arrows {
+        width: 80px;
+        height: 92px;
+        position: absolute;
+        left: 50%;
+        margin-left: -30px;
+        bottom: 6%;
+    }
+  
+    .arrows path {
+        stroke: #b3aca7;
+        fill: transparent;
+        stroke-width: 3px;
+        animation: arrow 2s infinite;
+    }
+  
+    @keyframes arrow
+    {
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+    }
+  
+    @-webkit-keyframes arrow
+    {
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+    }
+  
+    .arrows path.a1 {
+        animation-delay:-1s;
+    }
+  
+    .arrows path.a2 {
+        animation-delay:-0.5s;
+    }
+  
+    .arrows path.a3 {
+        animation-delay:0s;
+    }
 }
 
 .contentOne {
-
     width: 100vw;
     height: 100vh;
     background-color: blue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+    h2 {
+        color: #E5E1DD;
+        font-family: 'Megrim', cursive;
+        font-size: 4rem;
+        margin-top: 100px;
+        text-align: center;
+    }
+
 }
 
 .contentTwo {
-
     width: 100vw;
     height: 100vh;
     background-color: red;
+    display: flex;
+    align-items: center;
+
+
+    .contentRight { 
+        height: 50%;
+        width: 50%;
+        margin-right: 50px;
+
+        h2 {
+            color: #E5E1DD;
+            font-family: 'Megrim', cursive;
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        p{
+            color: #E5E1DD;
+            font-family: 'Open Sans', sans-serif;
+            text-align: justify;
+        }
+    }
+
+
+    .contentLeft {
+
+        width: 50%;
+        height: 50%;
+        margin-left: 50px;
+
+        img{
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+
 }
 
 .contentThree {
-
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
     background-color: green;
+    justify-content: center;
+    display: flex;
+
+    h2 {
+        color: #E5E1DD;
+        font-family: 'Megrim', cursive;
+        font-size: 4rem;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    div{
+        height: 100%;
+        width: 100%;
+        img{
+            max-width: 33%;
+            max-height: 50%;
+            align-self: center;
+
+        }
+    }
 }
