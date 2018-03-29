@@ -21,4 +21,4 @@ Observações:
 ## "Como realizou o "upload" do código para o servidor;"
 Usando enviei os arquivos via terminal para o GitHub, e ativei o GitHub pages, com um gh-branch interno na pasta APP, já que o index.html não estava no master branch.
 
-# Utilizei o GULP e SCSS para processar o CSS.
+# Utilizei o GULP e SCSS para processar o CSS..
